@@ -1,0 +1,1 @@
+<?php include_partial('container_newsletter_html',array('newsletter' => $newsletter)); ?>

@@ -1,0 +1,85 @@
+sfAssetFolder:
+  sfAssetFolder_1:
+    tree_left: '1'
+    tree_right: '12'
+    name: media
+    relative_path: media
+    created_at: '2010-12-21 23:11:32'
+    updated_at: '2010-12-21 23:11:32'
+  sfAssetFolder_2:
+    tree_left: '2'
+    tree_right: '3'
+    name: frfr
+    relative_path: media/frfr
+    created_at: '2010-12-21 23:11:49'
+    updated_at: '2010-12-21 23:11:49'
+  sfAssetFolder_3:
+    tree_left: '4'
+    tree_right: '9'
+    name: joan
+    relative_path: media/joan
+    created_at: '2010-12-21 23:12:22'
+    updated_at: '2010-12-21 23:12:22'
+  sfAssetFolder_4:
+    tree_left: '5'
+    tree_right: '6'
+    name: frf
+    relative_path: media/joan/frf
+    created_at: '2010-12-21 23:12:55'
+    updated_at: '2010-12-21 23:12:55'
+  sfAssetFolder_5:
+    tree_left: '7'
+    tree_right: '8'
+    name: frfr
+    relative_path: media/joan/frfr
+    created_at: '2010-12-21 23:15:12'
+    updated_at: '2010-12-21 23:15:12'
+  sfAssetFolder_6:
+    tree_left: '10'
+    tree_right: '11'
+    name: Newsletter
+    relative_path: media/Newsletter
+    created_at: '2010-12-22 09:32:12'
+    updated_at: '2010-12-22 09:32:12'
+sfAsset:
+  sfAsset_1:
+    folder_id: sfAssetFolder_3
+    filename: perfil.jpg
+    type: image
+    filesize: '80'
+    created_at: '2010-12-21 23:13:13'
+  sfAsset_2:
+    folder_id: sfAssetFolder_3
+    filename: 1292969720perfil.jpg
+    type: image
+    filesize: '80'
+    created_at: '2010-12-21 23:15:21'
+  sfAsset_3:
+    folder_id: sfAssetFolder_6
+    filename: naturlens-nadalacat-2010.jpg
+    type: image
+    filesize: '274'
+    created_at: '2010-12-22 09:32:39'
+  sfAsset_4:
+    folder_id: sfAssetFolder_6
+    filename: foto1.jpg
+    type: image
+    filesize: '29'
+    created_at: '2010-12-29 15:55:59'
+SfAssetI18n:
+  SfAssetI18n_1_en:
+    id: sfAsset_1
+    culture: en
+    description: perfil.jpg
+  SfAssetI18n_2_en:
+    id: sfAsset_2
+    culture: en
+    description: perfil.jpg
+  SfAssetI18n_3_ca:
+    id: sfAsset_3
+    culture: ca
+    description: naturlens-nadalacat-2010.jpg
+  SfAssetI18n_4_ca:
+    id: sfAsset_4
+    culture: ca
+    description: foto1.jpg

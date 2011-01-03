@@ -1,0 +1,52 @@
+propel:
+  _attributes:      { package: plugins.iogNewsletterPlugin.lib.model }
+
+  iog_newsletter:
+    _attributes:    { phpName: iogNewsletter }
+    id: ~
+    numero: integer
+    data_publicacio: { type: timestamp }
+    titular: varchar(255)
+    template_id: { type: integer, required: true, foreignTable: iog_newsletter_template, foreignReference: id, onDelete: cascade }
+    send_date: timestamp
+    iog_newsletter_llista_id: ~
+    
+
+  iog_newsletter_template:
+    _atributes:   { phpName: iogNewsletterTemplate }
+    id: ~
+    name: varchar(100) # cerca el template dintre de la carpeta del plugin
+
+  iog_newsletter_template_apartat:
+    id: ~
+    iog_newsletter_template_id: ~
+    name: varchar(255)
+    email_content: longvarchar
+    web_content: longvarchar
+    
+
+  iog_newsletter_content:
+    _attributes:    { phpName: iogNewsletterContent }
+    id: ~
+    newsletter_id: { type: integer, required: true, foreignTable: iog_newsletter, foreignReference: id, onDelete: cascade }
+    apartat: varchar(255)
+    title: varchar(255)
+    slug: varchar(255)
+    email_content: longvarchar
+    web_content: longvarchar
+
+
+  iog_newsletter_emails:
+    id: ~
+    email: { type: varchar(255), index: unique }
+    nom: varchar(255)       #entitat o persona
+    cognoms: varchar(255)
+    iog_newsletter_llista_id: ~
+
+  iog_newsletter_llista:
+    nom: varchar(255)
+
+
+  mail_message:
+    message:    { type: blob, required: true }
+    created_at: ~

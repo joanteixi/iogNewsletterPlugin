@@ -1,0 +1,6 @@
+all:
+  iognewsletter_templates:
+    normal_ca:
+      centre:
+        email_content: "<p>Articles/notícies de l'esquerra</p>"
+        web_content: "<p>Article notícia desenvolupat</p>"

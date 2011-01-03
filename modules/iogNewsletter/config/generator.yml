@@ -1,0 +1,37 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           iogNewsletter
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          newsletter
+    with_propel_route:     1
+
+    config:
+      actions: ~
+      fields:
+        send_date: { date_format: 'dd-M-y', label: Data enviament }
+        iogNewsletterLlista: { label: Llista }
+        iog_newsletter_llista_id: { label: Llista }
+        template_id: { label: Plantilla }
+      list:
+        title: Llista de newsletter
+        display: [ numero, titular, iogNewsletterLlista, send_date ]
+        sort:    [ send_date, desc ]
+        object_actions:
+          show: { label: veure, action: show }
+          _edit: ~
+          _delete: ~
+        actions:
+          _new: ~
+          
+      filter:
+        class: false
+      form:    ~
+      edit:
+        title: Edita els newsletter <i>%%titular%%</i>
+      new:
+        title: Nou Newsletter

@@ -1,0 +1,36 @@
+IogNewsletterTemplate:
+  IogNewsletterTemplate_1:
+    name: nadala_ca
+  IogNewsletterTemplate_2:
+    name: nadala_es
+  IogNewsletterTemplate_3:
+    name: normal_ca
+  IogNewsletterTemplate_4:
+    name: normal_es
+
+
+iogNewsletterTemplateApartat:
+  apartat_1:
+    iog_newsletter_template_id: IogNewsletterTemplate_3
+    name: center
+    
+
+IogNewsletterLlista:
+  llista_ca:
+    nom: Llista en català
+
+IogNewsletter:
+  iogNewsletter_1:
+    numero: '1'
+    data_publicacio: '2010-12-29 00:00:00'
+    titular: 'Newsletter Gener'
+    template_id: IogNewsletterTemplate_3
+    iog_newsletter_llista_id: llista_ca
+
+
+IogNewsletterEmails:
+  IogNewsletterEmails_1:
+    email: joan@laiogurtera.com
+    nom: ''
+    cognoms: ''
+

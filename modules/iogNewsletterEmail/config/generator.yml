@@ -1,0 +1,30 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           iogNewsletterEmails
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              iogNewsletterEmails
+    plural:                iogNewsletterEmailss
+    route_prefix:          iog_newsletter_emails
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        iog_newsletter_llista: { label: Llista }
+      list:
+        title: Llista de direccions de contacte
+        display: [ =email, nom, cognoms, iog_newsletter_llista ]
+      filter:
+        display: [ email, cognoms, iog_newsletter_llista_id ]
+        fields:
+          iog_newsletter_llista_id:
+            label: Llista
+      form: ~
+      edit:
+        title: Editar la direcció de contacte <i>%%email%%</i>
+      new:
+        title: Nova direcció de contacte

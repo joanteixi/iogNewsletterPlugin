@@ -1,0 +1,30 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           iogNewsletterLlista
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              iogNewsletterLlista
+    plural:                iogNewsletterLlistas
+    route_prefix:          iog_newsletter_llista
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title: Llistes de contactes
+        display: [ nom ]
+        object_actions:
+          veure_membres: { action: listMembers }
+        actions:
+          _new: ~
+
+      filter:  ~
+      form:    ~
+      edit:
+        title: Editar la llista de contactes
+      new:
+        title: Nova llista de contactes

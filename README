@@ -1,0 +1,94 @@
+iogNewsletter plugin
+======================
+This is an application plugin for manage newsletter: create newsletter from a template and send it to a list of emails. 
+
+In this alpha version there're a lot of things to do, but it's funcional in it basic operations. 
+
+It requires ckEditor to edit newsletter and some kind of image browser will be a good idea (like sfAssetsLibraryPlugin).
+ 
+
+Prerequisites
+-------------
+
+This plugin for symfony 1.3 and above depends on ckEditor plugin to edit newsletter contents and jQuery javascript library.
+
+
+Installation
+------------
+
+1 - Install the plugin.
+
+The easiest way to install `iogNewsletterLibraryPlugin` is to use the symfony command line:
+
+    > php symfony plugin:install iogNewsletterLibraryPlugin
+
+Alternatively, if you don't have PEAR installed, you can download the latest package from my [git hub profile](https://github.com/joanteixido/iogNewsletterPlugin). If you use git remember to publish the plugin assets by calling the `plugin:publish-assets` symfony task.
+
+2 - Build the data structures
+ 
+Rebuild the model and generate the SQL code for the new tables:
+
+    > php symfony propel:build-model
+    > php symfony propel:build-sql
+
+Create the new tables in your database. Use the generated `data/sql/plugins.sfAssetsLibraryPlugin.lib.model.schema.sql` file for that purpose. For instance, with MySQL:
+
+    > mysql -uroot -p mydb < data/sql/plugins.iogNewsletterLibraryPlugin.lib.model.schema.sql
+
+3 - Configure your project to use the plugin features
+
+Enable the `iogNewsletterPlugin`:
+    
+    [php]
+    // in myproject/config/ProjectConfiguration.class.php
+    class ProjectConfiguration extends sfProjectConfiguration
+    {
+      public function setup()
+      {
+        $this->enablePlugin('iogNewsletterPlugin');
+      }
+    }
+ 
+Enable the modules of the newsletter application via the `settings.yml` file.
+
+    // in myproject/apps/my_app/config/settings.yml
+    all:
+      .settings:
+        enabled_modules:
+          - default
+          - iogNewsletter # the primary module to manage newsletters
+          - iogNewsletterEmail # it's a basic admin generator module to manage emails list
+          - iogNewsletterLlista # it's a basic admin generator module to manage list of emails
+          - iogNewsletterTemplate # manage your templates.
+          
+          
+4 - Clear the cache to enable the autoloading to find the new classes:
+    
+    > php symfony cc
+
+
+5 - You can now start using the plugin by browsing to the backend module's default page:
+    
+    http://myproject/backend_dev.php/iogNewsletter
+
+Configuration
+-------------
+
+TODO
+----
+
+* A lot of things!!!!
+* Create base plugin in english
+* Manage returned emails
+* Make more unit and functional test
+* Do best the template manage model
+* Make a list of TODO things :(
+
+
+Changelog
+---------
+
+### 2011-01-03 | 0.1 Beta
+
+* initial version
+
